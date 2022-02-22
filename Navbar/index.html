@@ -6,10 +6,32 @@
     <title>Profile</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./fonts.css" class="">
+    <link rel="stylesheet" href="./scrollbar.css" class="">
+    <link rel="stylesheet" href="./circle-percentage.css" class="">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body class="bg-[#f4f7f6] font-['Roboto'] text-[#202121] relative duration-100">
-    <header class="w-screen bg-[#f4f7f6]' shadow-md fixed bg-[#f4f7f6]">
+<body class="bg-[#f4f7f6] font-['Roboto'] relative text-[#202121] duration-100">
+    <!-- Menu (Slide in from left) -->
+    <div class="absolute w-screen h-screen bg-black opacity-70 z-[19]"></div>
+    <div id="custom-scrollbar" class="absolute top-0 left-0 w-[320px] opacity-100 h-full bg-[#f4f7f6] z-[20] overflow-scroll text-[#202121]">
+        <ul class="">
+            <li class="w-full h-[70px] border flex items-center hover:opacity-80 cursor-pointer justify-end pr-4">CLOSE <i class='text-4xl bx bx-x'></i></li>
+            <li class="w-full h-[70px] border flex items-center hover:opacity-80 cursor-pointer p-8 font-semibold"><a href="" class="">Register / Log-in</a></li>
+            <li class="w-full h-[70px] border flex items-center hover:opacity-80 cursor-pointer p-8 font-semibold"><a href="" class="">Home</a></li>
+            <li class="w-full h-[70px] border flex items-center hover:opacity-80 cursor-pointer p-8 font-semibold"><a href="" class="">Winners</a></li>
+            <li class="w-full h-[70px] border flex items-center hover:opacity-80 cursor-pointer p-8 font-semibold"><a href="" class="">Nominees</a></li>
+            <li class="w-full h-[70px] border flex items-center hover:opacity-80 cursor-pointer p-8 font-semibold"><a href="" class="">Collections</a></li>
+            <li class="w-full h-[70px] border flex items-center hover:opacity-80 cursor-pointer p-8 font-semibold"><a href="" class="">Academy</a></li>
+            <li class="w-full h-[70px] border flex items-center hover:opacity-80 cursor-pointer p-8 font-semibold"><a href="" class="">Professional Dictionary</a></li>
+            <li class="w-full h-[70px] border flex items-center hover:opacity-80 cursor-pointer p-8 font-semibold"><a href="" class="">Jobs & Talent</a></li>
+            <li class="w-full h-[70px] border flex items-center hover:opacity-80 cursor-pointer p-8 font-semibold"><a href="" class="">Blog</a></li>
+            <li class="w-full h-[70px] border flex items-center hover:opacity-80 cursor-pointer p-8 font-semibold"><a href="" class="">Education</a></li>
+            <li class="w-full h-[70px] border flex items-center hover:opacity-80 cursor-pointer p-8 font-semibold"><a href="" class="">eBooks</a></li>
+            <li class="w-full h-[70px] border flex items-center hover:opacity-80 cursor-pointer p-8 font-semibold"><a href="" class="">Enable Dark Mode</a></li>
+        </ul>
+    </div>
+    <!-- Navbar -->
+    <header class="w-screen bg-[#f4f7f6]' shadow-md fixed z-10 bg-[#f4f7f6]">
         <div class="h-[70px] w-full bg-[#f4f7f6] flex justify-between shadow items-center">
             <span class="text-xs cursor-pointer underline hover:opacity-80 mx-9">ENGLISH</span>
             <a href="#"  class="text-black p-2 font-medium text-sm pl-24 font-['Cabin'] whitespace-nowrap">The awards of design, creativity and innovation on the internet</a>
@@ -18,11 +40,11 @@
                 <li class=""><a href="" class="p-2 text-xl text-[#202121] hover:opacity-70"><i class='bx bxl-instagram-alt' ></i></a></li>
                 <li class=""><a href="" class="p-2 text-2xl text-[#202121] hover:opacity-70"><i class='bx bxl-youtube' ></i></a></li>
             </ul>
-        </div>  
+        </div>
         <div class="flex h-[70px] w-full items-center justify-between">
             <!-- Left part -->
             <div class="flex items-center">
-                <div class="flex items-center py-[17px] px-8 border cursor-pointer hover:opacity-80">
+                <div class="flex items-center py-[18px] px-8 border cursor-pointer hover:opacity-80">
                     <i class='bx bx-menu text-2xl border-1 mr-3' ></i>
                     <span class="font-normal text-sm">MENU</span>
                 </div>
@@ -38,8 +60,70 @@
             </div>
         </div>
     </header>
-    <section class=" w-screen pt-[140px]">
-        <div class="bg-[url('./img/bg-3.jpg')] bg-cover no-repeat h-[460px] w-full"></div>
+    <section class=" w-screen pt-[140px] relative">
+        <div class="bg-[url('./img/bg-3.jpg')] justify-between flex flex-col relative bg-cover no-repeat h-[460px] w-full">
+            <div class="w-full h-min justify-between relative z-10 text-lg flex pt-12 px-12 text-[#f4f7f6]">
+                <h3 class="pr-2">Site of the day</h3>
+                <p class="flex-1 font-thin">February 20 2022</p>
+                <i class='bx bx-share-alt p-2 border rounded-full cursor-pointer hover:text-[#49c0b1] hover:border-[#49c0b1] duration-200'></i>
+            </div>
+            <div class="z-10 flex flex-col font-extralight items-center">
+                <h2 class="text-white font-bold text-4xl">SteelWave</h2>
+                <p class="text-[#f4f7f6] py-2 uppercase">by <a class="text-[#49c0b1] hover:text-white cursor-pointer font-semibold duration-200">haus</a> from <strong class="">united states</strong> with <strong class="">7.31</strong></p>
+                <!-- Progression Circles -->
+                <div class="">
+                    <div class="c100 p78 small green mx-4">
+                        <span class="font-medium">7.72</span>
+                        <div class="slice">
+                            <div class="bar"></div>                                  
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                    <div class="c100 p74 small mx-4">
+                        <span class="font-medium">7.36</span>
+                        <div class="slice">
+                            <div class="bar"></div>                                  
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                    <div class="c100 p78 small orange mx-4">
+                        <span class="font-medium">7.75</span>
+                        <div class="slice">
+                            <div class="bar"></div>                                  
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                    <div class="c100 p78 small red">
+                        <span class="font-medium">7.77</span>
+                        <div class="slice">
+                            <div class="bar"></div>                                  
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex z-10 pb-12 px-12 justify-between">
+                <!-- Left part -->
+                <div class="">
+                    <button class="text-md px-3 py-2 bg-[#1dcfb8] text-white rounded-full hover:bg-[#37c0af] duration-200 hover:text-[#f4f7f6] mr-4">Visit Site</button>
+                    <button class="text-md py-2 text-white rounded-full px-4 border duration-200 hover:text-[#49c0b1] hover:border-[#49c0b1]">Collect</button>
+                </div>
+                <!-- Right part -->
+                <div class="flex">
+                    <button class="text-md py-1 text-white rounded-full px-4 border duration-200 hover:text-[#49c0b1] hover:border-[#49c0b1]">Jury Votes</button>
+                    <!-- Small icons represent the judges of this vote -->
+                    <div class="flex flex-row">
+                        <div class="h-[40px] w-[40px] rounded-full overflow-hidden border hover:border-[#49c0b1] cursor-pointer duration-200 mx-2"><img src="./img/judges/1.jpg" alt="" class="object-cover"></div>
+                        <div class="h-[40px] w-[40px] rounded-full overflow-hidden border hover:border-[#49c0b1] cursor-pointer duration-200 mr-2"><img src="./img/judges/2.jpg" alt="" class="object-cover"></div>
+                        <div class="h-[40px] w-[40px] rounded-full overflow-hidden border hover:border-[#49c0b1] cursor-pointer duration-200 mr-2"><img src="./img/judges/3.jpg" alt="" class="object-cover"></div>
+                        <div class="h-[40px] w-[40px] rounded-full overflow-hidden border hover:border-[#49c0b1] cursor-pointer duration-200 mr-2"><img src="./img/judges/4.jpg" alt="" class="object-cover"></div>
+                        <div class="h-[40px] w-[40px] rounded-full overflow-hidden border hover:border-[#49c0b1] cursor-pointer duration-200"><img src="./img/judges/5.jpg" alt="" class="object-cover"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Darken the image behind, adjust z-index to change -->
+            <div class="w-full h-full bg-black absolute top-0 opacity-50"></div>
+        </div>
     </section>
 </body>
 </html>
