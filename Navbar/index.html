@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="./css/circle-percentage.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body class="bg-[#f4f7f6] font-['Roboto'] relative text-[#202121] duration-100 overflow-hidden">
-    <!-- Dark cover for menu, register form, etc... -->
-    <div id="dark-cover" class="hidden absolute w-screen h-screen bg-black opacity-70 z-[19]"></div>
+<body class="bg-[#f4f7f6] font-['Roboto'] relative text-[#202121] duration-100">
+    <!-- Dark cover for menu, register form, etc... --> 
+    <div id="dark-cover" class="hidden absolute w-screen h-screen bg-black opacity-70 z-[30]"></div>
     <!-- Menu (Slide in from left) -->
-    <div id="sidebar" class="custom-scrollbar duration-500 -translate-x-full absolute top-0 left-0 w-[320px] opacity-100 h-full bg-[#f4f7f6] z-[20] text-[#202121] overflow-y-auto origin-left">
+    <div id="sidebar" class="custom-scrollbar duration-500 -translate-x-full absolute top-0 left-0 w-[320px] opacity-100 h-full bg-[#f4f7f6] z-[31] text-[#202121] overflow-y-auto origin-left">
         <ul class="">
             <li id="close-btn" class="w-full h-[70px] border flex items-center hover:opacity-80 cursor-pointer justify-end pr-4">CLOSE <i class='text-4xl bx bx-x'></i></li>
             <li class="w-full h-[70px] border flex items-center hover:opacity-80 cursor-pointer p-8 font-semibold"><a href="" class="">Register / Log-in</a></li>
@@ -32,7 +32,7 @@
         </ul>
     </div>
     <!-- Register / Log-in forms -->
-    <div id="login-form" class="hidden w-screen h-screen z-[20] absolute flex items-center justify-center">
+    <div id="login-form" class="hidden w-screen h-screen z-[31] absolute flex items-center justify-center">
         <div class="relative py-12 px-24 flex flex-col rounded max-w-[700px] min-h-[560px] max-h-[614px] min-w-[648px] h-[80%] w-[80%] bg-[#f4f7f6] ">
             <!-- First row - Sign in + Register title -->
             <div class="flex justify-between text-lg">
@@ -59,7 +59,7 @@
         </div>  
     </div>
     <!-- Navbar -->
-    <header class="w-screen bg-[#f4f7f6]' shadow-md fixed z-10 bg-[#f4f7f6]">
+    <header class="w-screen bg-[#f4f7f6]' shadow-md fixed z-[29] bg-[#f4f7f6]">
         <div class="h-[70px] w-full bg-[#f4f7f6] flex justify-between shadow items-center">
             <span class="text-xs cursor-pointer underline hover:opacity-80 mx-9">ENGLISH</span>
             <a href="#"  class="text-black p-2 font-medium text-sm pl-24 font-['Cabin'] whitespace-nowrap">The awards of design, creativity and innovation on the internet</a>
@@ -88,11 +88,12 @@
             </div>
         </div>
     </header>
+    <!-- Begin content section -->
     <section class=" w-screen pt-[140px] relative">
         <div class="bg-[url('./img/bg-3.jpg')] justify-between flex flex-col relative bg-cover no-repeat h-[460px] w-full">
-            <div class="w-full h-min justify-between relative z-10 text-lg flex pt-12 px-12 text-[#f4f7f6]">
+            <div class="w-screen h-min justify-between relative z-10 text-lg flex pt-12 px-12 text-[#f4f7f6]">
                 <h3 class="pr-2">Site of the day</h3>
-                <p class="flex-1 font-thin">February 20 2022</p>
+                <p class="flex-1 font-light">February 20 2022</p>
                 <i class='bx bx-share-alt p-2 border rounded-full cursor-pointer hover:text-[#49c0b1] hover:border-[#49c0b1] duration-200'></i>
             </div>
             <div class="z-10 flex flex-col font-extralight items-center">
@@ -151,6 +152,13 @@
             </div>
             <!-- Darken the image behind, adjust z-index to change -->
             <div class="w-full h-full bg-black absolute top-0 opacity-50"></div>
+        </div>
+    <!-- Sites of the day -->
+        <div class="px-[50px] overflow-hidden">
+            <div class="flex py-[50px]">
+                <h3 class="pr-2">Site of the day</h3>
+                <p class="flex-1 font-light">February 20 2022</p>
+            </div>
         </div>
     </section>
 </body>
