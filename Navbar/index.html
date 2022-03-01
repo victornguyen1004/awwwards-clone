@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="w-screen box-border">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/circle-percentage.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body class="bg-[#f4f7f6] font-['Roboto'] relative text-[#202121] duration-100">
+<body class="bg-[#f4f7f6] font-['Roboto'] relative text-[#202121] duration-100 custom-scrollbar overflow-x-hidden">
     <!-- Dark cover for menu, register form, etc... --> 
     <div id="dark-cover" class="hidden absolute w-screen h-screen bg-black opacity-70 z-[30]"></div>
     <!-- Menu (Slide in from left) -->
@@ -154,13 +154,42 @@
             <div class="w-full h-full bg-black absolute top-0 opacity-50"></div>
         </div>
     <!-- Sites of the day -->
-        <div class="px-[50px] overflow-hidden">
+        <!-- Title -->
+        <div class="px-[50px] w-screen">
             <div class="flex py-[50px]">
-                <h3 class="pr-2">Site of the day</h3>
+                <h3 class="pr-2 font-medium">Site of the day</h3>
                 <p class="flex-1 font-light">February 20 2022</p>
             </div>
         </div>
-    </section>
+        <!-- Items -->
+        <div class="px-[50px] flex w-screen">
+            <!-- Item 1 -->
+            <div class="flex flex-col w-4/12 mr-8 rounded overflow-hidden">
+                <div class="w-full">
+                    <img src="./img/sotd-1.jpg" alt="sotd-1.jpg" class="object-cover">
+                </div>
+                <div class="flex flex-col p-6">
+                    <h4 class="font-medium">Likely Story 2022</h4>
+                </div>
+                <div class=""></div>
+            </div>
+            <!-- Item 2 -->
+            <div class="flex flex-col w-4/12 mr-8 rounded overflow-hidden">
+                <div class="w-full">
+                    <img src="./img/sotd-2.png" alt="sotd-2.png" class="object-cover">
+                </div>
+                <div class=""></div>
+                <div class=""></div>
+            </div>
+            <!-- Item 3 -->
+            <div class="flex flex-col w-4/12 rounded overflow-hidden">
+                <div class="w-full">
+                    <img src="./img/sotd-3.jpg" alt="sotd-3.jpg" class="object-cover">
+                </div>
+                <div class=""></div>
+                <div class=""></div>
+            </div>
+        </div>
 </body>
 <script src="./scripts.js"></script>
 </html>
