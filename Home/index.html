@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/scrollbar.css">
     <link rel="stylesheet" href="./css/circle-percentage.css">
+    <link rel="stylesheet" href="./css/item-hover-fx.css" class="">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body class="bg-[#f4f7f6] font-['Roboto'] relative text-[#202121] duration-100 custom-scrollbar overflow-x-hidden">
@@ -61,18 +62,18 @@
     <!-- Navbar -->
     <header class="w-screen bg-[#f4f7f6]' shadow-md fixed z-[29] bg-[#f4f7f6]">
         <div class="h-[70px] w-full bg-[#f4f7f6] flex justify-between shadow items-center">
-            <span class="text-xs cursor-pointer underline hover:opacity-80 mx-9">ENGLISH</span>
+            <span class="text-xs cursor-pointer underline hover:opacity-80 mx-9 duration-200">ENGLISH</span>
             <a href="#"  class="text-black p-2 font-medium text-sm pl-24 font-['Cabin'] whitespace-nowrap">The awards of design, creativity and innovation on the internet</a>
             <ul class="flex flex-row items-center justify-between px-9">
-                <li class=""><a href="https://www.facebook.com/nqv.ilb/" target="_blank" class="p-2 text-base text-[#202121] hover:opacity-70"><i class='bx bxl-facebook-square' ></i></a></li>
-                <li class=""><a href="https://www.instagram.com/quangvu._.nvm/" target="_blank" class="p-2 text-xl text-[#202121] hover:opacity-70"><i class='bx bxl-instagram-alt' ></i></a></li>
-                <li class=""><a href="https://www.youtube.com/channel/UC4-JR5OFHXTc1PVY5IfdRlg" target="_blank" class="p-2 text-2xl text-[#202121] hover:opacity-70"><i class='bx bxl-youtube' ></i></a></li>
+                <li class=""><a href="https://www.facebook.com/nqv.ilb/" target="_blank" class="p-2 text-base text-[#202121] duration-200 hover:opacity-70"><i class='bx bxl-facebook-square' ></i></a></li>
+                <li class=""><a href="https://www.instagram.com/quangvu._.nvm/" target="_blank" class="p-2 text-xl text-[#202121] duration-200 hover:opacity-70"><i class='bx bxl-instagram-alt' ></i></a></li>
+                <li class=""><a href="https://www.youtube.com/channel/UC4-JR5OFHXTc1PVY5IfdRlg" target="_blank" class="p-2 text-2xl text-[#202121] duration-200 hover:opacity-70"><i class='bx bxl-youtube' ></i></a></li>
             </ul>
         </div>
         <div class="flex h-[70px] w-full items-center justify-between">
             <!-- Left part -->
             <div class="flex items-center">
-                <div id="menu-btn" class="flex items-center py-[18px] px-8 border cursor-pointer hover:opacity-80">
+                <div id="menu-btn" class="flex items-center py-[18px] px-8 border cursor-pointer duration-200 hover:opacity-80">
                     <i class='bx bx-menu text-2xl border-1 mr-3' ></i>
                     <span class="font-normal text-sm">MENU</span>
                 </div>
@@ -82,9 +83,9 @@
                 <div class="flex w-full justify-between relative">
                     <i class='bx bx-search text-xl p-5 cursor-pointer hover:opacity-80'></i>
                     <a href="#" class="text-3xl translate-x-16  font-bold flex self-center">victor.<p class="font-normal">web</p> </a>
-                    <a id="login-btn" href="#" class="text-xs leading-[70px] block font-medium hover:opacity-70 mx-8 whitespace-nowrap">REGISTER / LOG-IN</a>    
+                    <a id="login-btn" href="#" class="text-xs leading-[70px] block font-medium hover:opacity-70 mx-8 whitespace-nowrap duration-200">REGISTER / LOG-IN</a>    
                 </div>
-                <a href="#" class="text-xs leading-[70px] block font-medium text-white bg-[#202121] px-8 whitespace-nowrap hover:opacity-90 shadow">SUBMIT YOUR SITE!</a>
+                <a href="#" class="text-xs leading-[70px] block font-medium text-white bg-[#202121] px-8 whitespace-nowrap hover:opacity-90 shadow duration-200">SUBMIT YOUR SITE!</a>
             </div>
         </div>
     </header>
@@ -164,23 +165,26 @@
         <!-- Items -->
         <div class="px-[50px] flex w-screen pb-[50px]">
             <!-- Item 1 -->
-            <div class="flex flex-col w-4/12 mr-8 rounded overflow-hidden bg-white border shadow">
-                <div class="w-full overflow-hidden relative">
-                    <img src="./img/sotd-1.jpg" alt="sotd-1.jpg" class="object-cover hover:scale-110 duration-500 rounded-t">
-                    <div class="z-1 bg-black h-full w-full"></div>
+            <div class="flex flex-col w-4/12 mr-8 justify-between rounded overflow-hidden bg-white border shadow">
+                <!-- "item-container (Class) is for external custom css" -->
+                <div class="item-container w-full relative overflow-hidden cursor-pointer duration-500">
+                    <!-- item-image (Class) is for external custom css -->
+                    <img src="./img/sotd-1.jpg" alt="sotd-1.jpg" id="" class="item-image object-cover duration-500 rounded-t">
+                    <!-- dark-filter (Class) is for external custom css, when hover item-container, show dark-filter -->
+                    <div class="opacity-0 dark-filter bg-black opacity-50 z-1 w-full h-full absolute top-0 left-0"></div>
                 </div>
-                <div class="flex flex-col justify-between p-6 border-b">
-                    <h4 class="font-medium">Likely Story 2022</h4>
+                <div class="flex flex-col justify-between p-6 z-1">
+                    <h4 class="font-medium cursor-pointer">Likely Story 2022</h4>
                     <div class="flex justify-between w-full font-light text-sm mt-4">
                         <span class="">From Russia</span>
                         <span class="">March 1, 2022</span>
                     </div>
                 </div>
-                <div class="flex items-center w-full h-full px-6 max-h-[80px] justify-center">
-                        <div class="w-7 h-7 mr-2"><img src="./img/mini/1.jpg" alt="" class="object-cover rounded-full"></div>
+                <div class="flex items-center w-full p-6 max-h-[80px] justify-center border-t">
+                        <div class="w-7 h-7 mr-2 cursor-pointer"><img src="./img/mini/1.jpg" alt="" class="object-cover rounded-full"></div>
                         <div class="text-xs grow-1 flex flex-row grow">
                             <p class="font-light pr-[3px]">BY</p>
-                            <span class="font-medium">MARINA LOOO</span>
+                            <span class="font-medium cursor-pointer">MARINA LOOO</span>
                         </div>
                         <div class="flex flex-row justify-between text-[10px]">
                             <span class="mr-2 bg-black rounded-full font-medium text-white px-1 py-0.5 bg-[#9fd2d6]">HM</span>
@@ -189,23 +193,23 @@
                 </div>
             </div>
             <!-- Item 2 -->
-            <div class="flex flex-col w-4/12 mr-8 rounded overflow-hidden bg-white border shadow">
-                <div class="w-full overflow-hidden relative">
-                    <img src="./img/sotd-2.png" alt="sotd-2.jpg" class="object-cover hover:scale-110 duration-500 rounded-t">
-                    <div class="z-1 bg-black h-full w-full"></div>
+            <div class="flex flex-col w-4/12 mr-8 justify-between rounded overflow-hidden bg-white border shadow">
+                <div class="item-container w-full relative overflow-hidden cursor-pointer">
+                    <img src="./img/sotd-2.png" alt="sotd-2.jpg" class="item-image object-cover duration-500 rounded-t">
+                    <div class="opacity-0 dark-filter bg-black opacity-50 z-1 w-full h-full absolute top-0 left-0"></div>
                 </div>
-                <div class="flex flex-col justify-between p-6 border-b">
-                    <h4 class="font-medium">9P Network</h4>
+                <div class="flex flex-col justify-between p-6">
+                    <h4 class="font-medium cursor-pointer">9P Network</h4>
                     <div class="flex justify-between w-full font-light text-sm mt-4">
                         <span class="">From Japan</span>
                         <span class="">May 5, 2022</span>
                     </div>
                 </div>
-                <div class="flex items-center w-full h-full px-6 max-h-[80px] justify-center">
-                        <div class="w-7 h-7 mr-2"><img src="./img/mini/2.jpg" alt="" class="object-cover rounded-full"></div>
+                <div class="flex items-center w-full p-6 max-h-[80px] justify-center border-t">
+                        <div class="w-7 h-7 mr-2 cursor-pointer"><img src="./img/mini/2.jpg" alt="" class="object-cover rounded-full"></div>
                         <div class="text-xs grow-1 flex flex-row grow">
                             <p class="font-light pr-[3px]">BY</p>
-                            <span class="font-medium">ALEX KEVILL</span>
+                            <span class="font-medium cursor-pointer">ALEX KEVILL</span>
                         </div>
                         <div class="flex flex-row justify-between text-[10px]">
                             <span class="mr-2 bg-black rounded-full font-medium text-white px-1 py-0.5 bg-[#9fd2d6]">HM</span>
@@ -214,23 +218,23 @@
                 </div>
             </div>
             <!-- Item 3 -->
-            <div class="flex flex-col w-4/12 mr-8 rounded overflow-hidden bg-white border shadow">
-                <div class="w-full overflow-hidden relative">
-                    <img src="./img/sotd-3.jpg" alt="sotd-3.jpg" class="object-cover hover:scale-110 duration-500 rounded-t">
-                    <div class="z-1 bg-black h-full w-full"></div>
+            <div class="flex flex-col w-4/12 mr-8 justify-between rounded overflow-hidden bg-white border shadow">
+                <div class="item-container w-full relative overflow-hidden cursor-pointer">
+                    <img src="./img/sotd-3.jpg" alt="sotd-3.jpg" class="item-image object-cover duration-500 rounded-t">
+                    <div class="opacity-0 dark-filter bg-black opacity-50 z-1 w-full h-full absolute top-0 left-0"></div>
                 </div>
-                <div class="flex flex-col justify-between p-6 border-b">
-                    <h4 class="font-medium">Likely Story 2022</h4>
+                <div class="flex flex-col justify-between p-6">
+                    <h4 class="font-medium cursor-pointer">Likely Story 2022</h4>
                     <div class="flex justify-between w-full font-light text-sm mt-4">
                         <span class="">From America</span>
                         <span class="">April 10, 2022</span>
                     </div>
                 </div>
-                <div class="flex items-center w-full h-full px-6 max-h-[80px] justify-center">
-                        <div class="w-7 h-7 mr-2"><img src="./img/mini/3.jpg" alt="" class="object-cover rounded-full"></div>
+                <div class="flex items-center w-full p-6 max-h-[80px] justify-center border-t">
+                        <div class="w-7 h-7 mr-2 cursor-pointer"><img src="./img/mini/3.jpg" alt="" class="object-cover rounded-full"></div>
                         <div class="text-xs grow-1 flex flex-row grow">
                             <p class="font-light pr-[3px]">BY</p>
-                            <span class="font-medium">GUCCI</span>
+                            <span class="font-medium cursor-pointer">GUCCI</span>
                         </div>
                         <div class="flex flex-row justify-between text-[10px]">
                             <span class="mr-2 bg-black rounded-full font-medium text-white px-1 py-0.5 bg-[#9fd2d6]">HM</span>
@@ -251,65 +255,65 @@
         <!-- Items -->
         <div class="px-[50px] flex w-screen pb-[50px]">
             <!-- Item 1 -->
-            <div class="flex flex-col w-4/12 mr-8 rounded overflow-hidden bg-white border shadow">
-                <div class="w-full overflow-hidden relative">
-                    <img src="./img/nominies-1.jpg" alt="nominies-1.jpg" class="object-cover hover:scale-110 duration-500 rounded-t">
-                    <div class="z-1 bg-black h-full w-full"></div>
+            <div class="flex flex-col w-4/12 mr-8 justify-between rounded overflow-hidden bg-white border shadow">
+                <div class="item-container w-full relative overflow-hidden cursor-pointer">
+                    <img src="./img/nominies-1.jpg" alt="nominies-1.jpg" class="item-image object-cover duration-500 rounded-t">
+                    <div class="opacity-0 dark-filter bg-black opacity-50 z-1 w-full h-full absolute top-0 left-0"></div>
                 </div>
-                <div class="flex flex-col justify-between p-6 border-b">
-                    <h4 class="font-medium">COWBOY.</h4>
+                <div class="flex flex-col justify-between p-6">
+                    <h4 class="font-medium cursor-pointer">COWBOY.</h4>
                     <div class="flex justify-between w-full font-light text-sm mt-4">
                         <span class="">From USA</span>
                         <span class="">March 5, 2022</span>
                     </div>
                 </div>
-                <div class="flex items-center w-full h-full px-6 max-h-[80px] justify-center">
-                        <div class="w-7 h-7 mr-2"><img src="./img/mini/4.jpg" alt="" class="object-cover rounded-full"></div>
+                <div class="flex items-center w-full p-6 max-h-[80px] justify-center border-t">
+                        <div class="w-7 h-7 mr-2 cursor-pointer"><img src="./img/mini/4.jpg" alt="" class="object-cover rounded-full"></div>
                         <div class="text-xs grow-1 flex flex-row grow">
                             <p class="font-light pr-[3px]">BY</p>
-                            <span class="font-medium">CORTLAND</span>
+                            <span class="font-medium cursor-pointer">CORTLAND</span>
                         </div>
                 </div>
             </div>
             <!-- Item 2 -->
-            <div class="flex flex-col w-4/12 mr-8 rounded overflow-hidden bg-white border shadow">
-                <div class="w-full overflow-hidden relative">
-                    <img src="./img/nominies-2.jpg" alt="nominies-2.jpg" class="object-cover hover:scale-110 duration-500 rounded-t">
-                    <div class="z-1 bg-black h-full w-full"></div>
+            <div class="flex flex-col w-4/12 mr-8 justify-between rounded overflow-hidden bg-white border shadow">
+                <div class="item-container w-full relative overflow-hidden cursor-pointer">
+                    <img src="./img/nominies-2.jpg" alt="nominies-2.jpg" class="item-image object-cover duration-500 rounded-t">
+                    <div class="opacity-0 dark-filter bg-black opacity-50 z-1 w-full h-full absolute top-0 left-0"></div>
                 </div>
-                <div class="flex flex-col justify-between p-6 border-b">
-                    <h4 class="font-medium">Engineered Floor</h4>
+                <div class="flex flex-col justify-between p-6">
+                    <h4 class="font-medium cursor-pointer">Engineered Floor</h4>
                     <div class="flex justify-between w-full font-light text-sm mt-4">
                         <span class="">From US</span>
                         <span class="">Feb 28, 2022</span>
                     </div>
                 </div>
-                <div class="flex items-center w-full h-full px-6 max-h-[80px] justify-center">
-                        <div class="w-7 h-7 mr-2"><img src="./img/mini/2.jpg" alt="" class="object-cover rounded-full"></div>
+                <div class="flex items-center w-full p-6 max-h-[80px] justify-center border-t">
+                        <div class="w-7 h-7 mr-2 cursor-pointer"><img src="./img/mini/2.jpg" alt="" class="object-cover rounded-full"></div>
                         <div class="text-xs grow-1 flex flex-row grow">
                             <p class="font-light pr-[3px]">BY</p>
-                            <span class="font-medium">OUI WILL</span>
+                            <span class="font-medium cursor-pointer">OUI WILL</span>
                         </div>
                 </div>
             </div>
             <!-- Item 3 -->
-            <div class="flex flex-col w-4/12 mr-8 rounded overflow-hidden bg-white border shadow">
-                <div class="w-full overflow-hidden relative">
-                    <img src="./img/nominies-3.jpg" alt="nominies-3.jpg" class="object-cover hover:scale-110 duration-500 rounded-t">
-                    <div class="z-1 bg-black h-full w-full"></div>
+            <div class="flex flex-col w-4/12 mr-8 justify-between rounded overflow-hidden bg-white border shadow">
+                <div class="item-container w-full relative overflow-hidden cursor-pointer">
+                    <img src="./img/nominies-3.jpg" alt="nominies-3.jpg" class="item-image object-cover duration-500 rounded-t">
+                    <div class="opacity-0 dark-filter bg-black opacity-50 z-1 w-full h-full absolute top-0 left-0"></div>
                 </div>
-                <div class="flex flex-col justify-between p-6 border-b">
-                    <h4 class="font-medium">Opportunities for Our Avatars</h4>
+                <div class="flex flex-col justify-between p-6">
+                    <h4 class="font-medium cursor-pointer">Opportunities for Our Avatars</h4>
                     <div class="flex justify-between w-full font-light text-sm mt-4">
                         <span class="">From New Zealand</span>
                         <span class="">December 4, 2022</span>
                     </div>
                 </div>
-                <div class="flex items-center w-full h-full px-6 max-h-[80px] justify-center">
-                        <div class="w-7 h-7 mr-2"><img src="./img/mini/5.png" alt="" class="object-cover rounded-full"></div>
+                <div class="flex items-center w-full p-6 max-h-[80px] justify-center border-t">
+                        <div class="w-7 h-7 mr-2 cursor-pointer"><img src="./img/mini/5.png" alt="" class="object-cover rounded-full"></div>
                         <div class="text-xs grow-1 flex flex-row grow">
                             <p class="font-light pr-[3px]">BY</p>
-                            <span class="font-medium">GLADEYE</span>
+                            <span class="font-medium cursor-pointer">GLADEYE</span>
                         </div>
                 </div>
             </div>

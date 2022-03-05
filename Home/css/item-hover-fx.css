@@ -1,0 +1,12 @@
+.item-container:hover .dark-filter {
+    opacity: 50%;
+    transition: 0.5s;
+}
+
+.item-container:not(:hover) .dark-filter {
+    transition: 0.5s;
+}
+
+.item-container:hover .item-image{
+    transform: scale(110%);
+}
